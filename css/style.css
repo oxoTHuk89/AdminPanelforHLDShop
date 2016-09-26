@@ -1,0 +1,25 @@
+body{
+	width:90%;
+	margin: 0 auto;
+	background: url(../img/bg_cont.jpg) top center;
+}
+.green{
+	color:green;
+}
+.red{
+	color:red;
+}
+.center,.center>th{
+	text-align: center;
+}
+.create_server{
+	width: 50%;
+    margin: 0 auto;
+}
+
+.hovered{
+	cursor:pointer;
+}
+.alert-danger{
+	text-align:center;
+}
