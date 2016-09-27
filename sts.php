@@ -32,13 +32,16 @@ if(isset($_REQUEST) && !empty($_REQUEST)){
     $setSts = new ServicesToServer();
     $setSts = $setSts->setServicesToServer($dbh, $data, $DataBase);
     echo $setSts;
+    //$setSts = json_decode($setSts, true);
     if(isset($setSts['error'])){
-        //$smarty->assign('error', $setSts);
-        //$smarty->display('error.tpl');
+        //$smarty->assign('error', $setSts['error']);
+        //$smarty->display('sts.tpl');
     }
     else{
        // $smarty->assign('sucsess', $setSts['sucsess']);
        // $smarty->display('sts.tpl');
+        //$smarty->assign('error', $setSts);
+        //$smarty->display('sts.tpl');
     }
     exit();
 }

@@ -73,6 +73,7 @@ class ServicesToServer
             $result['error'] = true;
             $result['error_message'] = 'Такая запись уже есть!';
         }
+        //return $result;
         return json_encode($result);
     }
 
@@ -199,7 +200,7 @@ class ServicesToServer
      * @param array $data id сервера
      * @return bool True когда успешно удален, False когда произошла ошибка при удалении
      */
-    public function deleteServers($dbh, $data)
+    public function deleteServers($dbh, $data, $DataBase)
     {
         $DbCheck = $dbh->prepare("SELECT id, servername FROM " . $DataBase . ".servers WHERE id = :id");
         $DbCheck->bindParam(':id', $data['serverdel'], PDO::PARAM_INT);

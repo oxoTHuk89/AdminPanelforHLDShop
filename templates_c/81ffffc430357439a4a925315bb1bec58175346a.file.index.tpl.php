@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-25 16:38:12
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-27 00:23:25
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1855457ded1dfeff7e9-19568086%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '81ffffc430357439a4a925315bb1bec58175346a' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1474619237,
+      1 => 1474883315,
       2 => 'file',
     ),
   ),
@@ -29,11 +29,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57ded1e01a2284_59337117')) {function content_57ded1e01a2284_59337117($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-<body>
 
-	<a href="monitoring.php"><input type="button" value="Управление серверами"></a>
-	<a href="services.php"><input type="button" value="Управление услугами"></a>
-	<a href="sts.php"><input type="button" value="Добавить услугу на сервер"></a>
+
 <table class='table table-bordered'>
     <tr class="center" style="    background-color: #6b6a6a;" id="">
         <th>Статус</th>

@@ -35,9 +35,6 @@ if(ADMIN){
 }
 
 $smarty = new Smarty();
-//$smarty->setTemplateDir($_SERVER['DOCUMENT_ROOT'].'/monitoring/templates');
-//$smarty->setCompileDir($_SERVER['DOCUMENT_ROOT'].'/monitoring/templates_c');
-
 
 $chmod = (int)substr(sprintf('%o', fileperms($smarty->getCompileDir())), -4);
 if($chmod != 777){	
@@ -52,6 +49,6 @@ else{
 $smarty->assign('getServers', $getServers);
 $smarty->assign('getGames', $getGames);
 $smarty->assign('ADMIN', ADMIN);
-$smarty->assign('member_id', $_COOKIE['member_id']);
+if (isset($_COOKIE['member_id']))$smarty->assign('member_id', $_COOKIE['member_id']);
 $smarty->display('index.tpl');
 }

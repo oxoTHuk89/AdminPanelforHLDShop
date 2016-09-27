@@ -16,8 +16,8 @@ function showDailog(width, name) {
 
 
 function success(result, width, name) {
-    var dialog_name = 'qwe';
-    $("body").dialog({
+    var dialog_name = eval(name);
+    $("#dialog").dialog({
         resizable: true,
         width: width,
         modal: true,

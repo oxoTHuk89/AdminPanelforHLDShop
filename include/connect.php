@@ -4,10 +4,10 @@ define ("RCON_VALIDATE", True);
 //Включаем добавление\уладение серверов
 define ("ADMIN", True);
 //База данных, подключение
-$user = "";
-$password = "";
-$host = "";
-$DataBase = "";
+$user = "root";
+$password = "EeY9door";
+$host = "myadmin.g-nation.ru";
+$DataBase = "monitoring";
 
 try {
     $dbh = new PDO('mysql:host=' . $host . ';dbname=' . $DataBase, $user, $password);
