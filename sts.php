@@ -27,43 +27,25 @@ $smarty->assign('getGames', $getGames);
 $smarty->assign('getServices', $getServices);
 $smarty->assign('ADMIN', ADMIN);
 
-if(isset($_REQUEST) && !empty($_REQUEST)){
+if (isset($_REQUEST) && !empty($_REQUEST)) {
     $data = $_REQUEST;
-    $setSts = new ServicesToServer();
-    $setSts = $setSts->setServicesToServer($dbh, $data, $DataBase);
-    echo $setSts;
-    //$setSts = json_decode($setSts, true);
-    if(isset($setSts['error'])){
-        //$smarty->assign('error', $setSts['error']);
-        //$smarty->display('sts.tpl');
+    if ($data['cost'] === "false") {
+        $deleteSts = new ServicesToServer();
+        $deleteSts = $deleteSts->deleteRelations($dbh, $data, $DataBase);
+        if (isset($deleteSts['error'])) {
+            $smarty->assign('error', $deleteSts['error_message']);
+        } elseif ($deleteSts['notice']) {
+            $smarty->assign('notice', $deleteSts['message']);
+        }
+    } else {
+        $setSts = new ServicesToServer();
+        $setSts = $setSts->setServicesToServer($dbh, $data, $DataBase);
+        if (isset($setSts['error'])) {
+            $smarty->assign('error', $setSts['error_message']);
+        } elseif ($setSts['notice']) {
+            $smarty->assign('notice', $setSts['message']);
+        }
     }
-    else{
-       // $smarty->assign('sucsess', $setSts['sucsess']);
-       // $smarty->display('sts.tpl');
-        //$smarty->assign('error', $setSts);
-        //$smarty->display('sts.tpl');
-    }
+    $smarty->display('sts.tpl');
     exit();
 }
-
-if(ADMIN){
-    if(isset($_POST['add_srv'])){
-        $setServers = new ServerInfo();
-        $setServers = $setServers->setServers($dbh, $_POST, $DataBase);
-        echo $setServers;
-        exit();
-    }
-    if(isset($_POST['serverdel'])){
-        $deleteServers = new ServerInfo();
-        $deleteServers = $deleteServers->deleteServers($dbh, $_POST);
-        echo $deleteServers;
-        exit();
-    }
-}
-
-
-
-$smarty->display('sts.tpl');
-
-
-

@@ -1,6 +1,5 @@
 {include file='header.tpl'}
 
-
 <table class='table table-bordered'>
     <tr class="center" style="    background-color: #6b6a6a;" id="">
         <th>Статус</th>

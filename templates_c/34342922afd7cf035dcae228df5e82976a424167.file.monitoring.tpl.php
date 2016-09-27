@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-21 14:40:36
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-27 16:28:32
          compiled from "./templates/monitoring.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:61879960357e271b46358f8-40287566%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34342922afd7cf035dcae228df5e82976a424167' => 
     array (
       0 => './templates/monitoring.tpl',
-      1 => 1473996923,
+      1 => 1474983314,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_57e271b46c80d8_59400618',
   'variables' => 
   array (
     'getServers' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'game' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_57e271b46c80d8_59400618',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57e271b46c80d8_59400618')) {function content_57e271b46c80d8_59400618($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 <?php } else { ?>
 <table class='table table-bordered'>
-    <tr class="center" style="    background-color: #6b6a6a;" id="">
+    <tr class="center">
         <th>Статус</th>
         <th>Название</th>
         <th>Игра</th>
@@ -105,7 +105,7 @@ if ($_smarty_tpl->tpl_vars['Server']->value['GamePort']!=27015) {?>:<?php echo $
 						<input type="hidden" class="button serverdel" name="" value=>
 
 					</td>
-				<?php }?>
+				<?php }?> 19228474
             </tr>
         <?php }?>
     <?php } ?>

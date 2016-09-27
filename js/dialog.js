@@ -13,11 +13,9 @@ function showDailog(width, name) {
         }
     });
 }
-
-
-function success(result, width, name) {
-    var dialog_name = eval(name);
-    $("#dialog").dialog({
+//Функция вызова диалога при любом разкладе после аякса. JSON off =(
+function success(result, width) {
+    $("#error").dialog({
         resizable: true,
         width: width,
         modal: true,
@@ -26,7 +24,6 @@ function success(result, width, name) {
             "Закрыть": function () {
                 $(this).dialog("close");
                 location.reload();
-                //$(name).show();
             }
         }
     });

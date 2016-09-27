@@ -3,7 +3,7 @@
 	<div class="alert alert-warning">{$getServers.error_message}</div>
 {else}
 <table class='table table-bordered'>
-    <tr class="center" style="    background-color: #6b6a6a;" id="">
+    <tr class="center">
         <th>Статус</th>
         <th>Название</th>
         <th>Игра</th>

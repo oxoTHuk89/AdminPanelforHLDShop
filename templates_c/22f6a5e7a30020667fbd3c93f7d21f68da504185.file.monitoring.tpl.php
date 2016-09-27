@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-26 12:49:04
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-27 12:48:28
          compiled from ".\templates\monitoring.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2032357da940b629001-98260418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '22f6a5e7a30020667fbd3c93f7d21f68da504185' => 
     array (
       0 => '.\\templates\\monitoring.tpl',
-      1 => 1473996923,
+      1 => 1474900804,
       2 => 'file',
     ),
   ),
@@ -105,7 +105,7 @@ if ($_smarty_tpl->tpl_vars['Server']->value['GamePort']!=27015) {?>:<?php echo $
 						<input type="hidden" class="button serverdel" name="" value=>
 
 					</td>
-				<?php }?>
+				<?php }?> 19228474
             </tr>
         <?php }?>
     <?php } ?>

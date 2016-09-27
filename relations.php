@@ -28,7 +28,10 @@ $smarty = new Smarty();
 $smarty->assign('getServers', $getServers);
 $smarty->assign('getGames', $getGames);
 $smarty->assign('getServices', $getServices);
+//var_dump($getRelationss);
 $smarty->assign('getRelationss', $getRelationss);
+
+
 if(isset($error))$smarty->assign('error', $error);
 $smarty->assign('ADMIN', ADMIN);
 

@@ -12,33 +12,34 @@ require_once('smarty/Smarty.class.php');
 //
 $getServices = new ServicesInfo();
 $getServices = $getServices->getServices($dbh, $DataBase);
-var_dump($getServices);
-$getGames = new ServicesInfo();
-$getGames = $getGames->getServices($dbh, $DataBase);
-
-if(ADMIN){
-	if(isset($_POST['add_srv'])){
-		$setServers = new Services();
-		$setServers = $setServers->setServers($dbh, $_POST, $DataBase);
-		echo $setServers;
-		exit();
-	}
-	if(isset($_POST['serverdel'])){
-		$deleteServers = new Services();
-		$deleteServers = $deleteServers->deleteServers($dbh, $_POST);
-		echo $deleteServers;
-		exit();
-	}
-}
-
 $smarty = new Smarty();
 
 $chmod = (int)substr(sprintf('%o', fileperms($smarty->getCompileDir())), -4);
-if($chmod != 777){
-	die('Нет парв на запись в папку '.$smarty->getCompileDir());
-}
+
 $smarty->assign('getServices', $getServices);
-/*$smarty->assign('getGames', $getGames);
-$smarty->assign('ADMIN', ADMIN);*/
-$smarty->display('services.tpl');
+
+if (isset($_REQUEST) && !empty($_REQUEST)) {
+    $data = $_REQUEST;
+    if ($data['remove'] === "true") {
+        $deleteSts = new ServicesInfo();
+        $deleteSts = $deleteSts->deleteServices($dbh, $data, $DataBase);
+        if (isset($deleteSts['error'])) {
+            $smarty->assign('error', $deleteSts['error_message']);
+        } elseif ($deleteSts['notice']) {
+            $smarty->assign('notice', $deleteSts['message']);
+        }
+    } else {
+        $setSts = new ServicesInfo();
+        $setSts = $setSts->setServices($dbh, $data, $DataBase);
+        if (isset($setSts['error'])) {
+            $smarty->assign('error', $setSts['error_message']);
+        } elseif ($setSts['notice']) {
+            $smarty->assign('notice', $setSts['message']);
+        }
+    }
+    $smarty->display('services.tpl');
+    exit();
+}else{
+    $smarty->display('services.tpl');
+}
 

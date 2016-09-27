@@ -49,6 +49,6 @@ else{
 $smarty->assign('getServers', $getServers);
 $smarty->assign('getGames', $getGames);
 $smarty->assign('ADMIN', ADMIN);
-if (isset($_COOKIE['member_id']))$smarty->assign('member_id', $_COOKIE['member_id']);
+//if (isset($_COOKIE['member_id']))$smarty->assign('member_id', $_COOKIE['member_id']);
 $smarty->display('index.tpl');
 }

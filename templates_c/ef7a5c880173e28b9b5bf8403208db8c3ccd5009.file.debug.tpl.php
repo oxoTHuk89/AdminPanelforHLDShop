@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-26 12:27:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-09-27 09:11:47
          compiled from "C:\Xampp\dev.soglasie.ru\source\smarty\debug.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:664757e8e9e6cd6084-25203874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef7a5c880173e28b9b5bf8403208db8c3ccd5009' => 
     array (
       0 => 'C:\\Xampp\\dev.soglasie.ru\\source\\smarty\\debug.tpl',
-      1 => 1413688876,
+      1 => 1474900804,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_57e8e9e6d1c597_58154622',
   'variables' => 
   array (
     'template_name' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'debug_output' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_57e8e9e6d1c597_58154622',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57e8e9e6d1c597_58154622')) {function content_57e8e9e6d1c597_58154622($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_debug_print_var')) include 'C:\\Xampp\\dev.soglasie.ru\\source\\smarty\\plugins\\modifier.debug_print_var.php';
 ?><?php $_smarty_tpl->_capture_stack[0][] = array('_smarty_debug', 'debug_output', null); ob_start(); ?>
